@@ -12,7 +12,7 @@
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<form action ="poststatusprocess.php" method = "POST">
+<form action ="inputFormprocess.php" method = "POST">
 <!--General Information-->
 <p>
 <h1>Article Details</h1>
