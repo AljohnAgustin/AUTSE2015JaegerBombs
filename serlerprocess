@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Status Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> SERLER SEARCH RESULTS</h1>
+<div id="main">
+<?php
+
+//Connects to the Database and searches for the searched status to match any words that exists in the database
+require_once ("settings.php");
+
+$practice=$_GET["practice"];
+$year1=$_GET["year1"];
+$year2=$_GET["year2"];
+
+
+$link =@mysqli_connect($host, $user, $pswd, $dbnm) or die ( " Unable to connect to server ");
+
+mysql_select_db("serler");
+
+$searchStatusCode = "Select * FROM serlerdb WHERE Research_Methods LIKE '%$practice%' and Year BETWEEN '$year1' and '$year2'";
+
+$results =@mysqli_query($link, $searchStatusCode);
+
+//Acquires all the details of the searched status results.
+//Will also print out multiple stasuses if the status word searched exists within other created stasuses.
+if($results->num_rows == 0) {
+	echo "<p> Search input not found. </p>";
+} else 
+{
+while($row =@mysqli_fetch_array($results)) {
+echo "<p><b>Title:</b> ".$row['Title']."</p>";
+
+echo "<p><b>Author:</b> ".$row['Author']."</p>";
+
+echo "<p><b>Journal</b> ".$row['Journal']."</p>";
+
+echo "<p><b>Year</b> ".$row['Year']."</p>";
+
+echo "<p><b>Description:</b> ".$row['Description']."</p><hr>";
+}
+}
+
+?>
+</div>
+</body>
+</html>
