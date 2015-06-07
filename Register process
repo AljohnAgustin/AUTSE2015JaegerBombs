@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+<title>Status Posting</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<a href="index.php">Home Page</a>
+<h1>Status Posting </h1>
+
+
+
+<div id="main">
+
+<?php
+
+	// post status process variables
+
+	$UserName=$_POST["UserName"];
+
+	$FirstName=$_POST["FirstName"];
+
+	$LastName=$_POST["LastName"];
+	
+	$EmailAddress=$_POST["EmailAddress"];
+
+	$Password=$_POST["Password"];
+
+	
+
+	
+
+	//Connects to the database using the details in the settings.php file
+
+	
+
+	require_once("settings.php");
+
+	
+
+	$connect=@mysqli_connect($host,$user,$pswd,$dbnm) or die ( " Unable to connect to server ");
+
+	
+
+	// The following three queries below are used to:
+
+	// Creates the table and if it doesnt exists
+
+	// Insert variables into the database for use later
+
+	// Looks for the status code in order to find uniqueness
+
+	mysql_select_db("SERLDBUSERS");
+
+	$sql = "CREATE TABLE IF NOT EXISTS SERLDBUSERS
+
+	( 
+
+	UserName VARCHAR (50),
+
+	Fname VARCHAR (50),
+
+	Lname VARCHAR (50),
+
+	Email VARCHAR (50),
+
+	Password VARCHAR (50)
+	
+	)";
+
+	
+
+	$insertQuery = "insert into SERLDBUSERS"."(Username,Fname,Lname,Email,Password)"
+	." values "
+	."('$UserName','$FirstName', '$LastName', '$EmailAddress','$Password')";
+
+	
+
+	if(!@mysqli_query($connect,$sql)) {
+	echo "ERROR";
+	}
+	else { 
+		"connected and created";
+		}
+
+		
+	
+	if($connect->query($insertQuery)){
+	echo "Data input success"; }
+	else {
+	echo "Error in data";
+	}
+
+
+
+	
+
+	
+
+	
+
+?>
+
+</div>
+</body>
+</html>
