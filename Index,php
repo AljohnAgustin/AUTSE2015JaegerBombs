@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>SERLER</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> SERLER</h1>
+<div id="main">
+<a href="registerform.php">Register</a>
+<p>
+<a href="serlerform.php">Submit an Article</a>
+<p>
+<a href="searchform.php">Search Articles</a>
+
+</div>
+</body>
+</html>
