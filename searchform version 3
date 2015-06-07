@@ -1,0 +1,141 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>SERLER ARTICLE POSTING SYSTEM</h1>
+<div id="main">
+<a href="index.php">Home Page</a>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<form action ="serlersearchprocess.php" method = "POST">
+<!--General Information-->
+<p>
+<h2>Article Details</h2>
+<label>Title: <input type="text" name="Title">*Mandatory field </label><br><br>
+<label>Author: <input type="text" name="Author">*Mandatory field </label><br><br>
+<label>Journal: <input type="text" name="Journal">*Mandatory field </label><br><br>
+<label>Year: <input type="text" name="Year">*Mandatory field </label><br><br>
+
+
+<!--Practice Information-->
+<h2>Practice Information</h2>
+<label> Practice
+<select name="Practice">
+  <option value="">Choose Practice </option>
+  <option value="Waterfall">Waterfall Development</option>
+  <option value="Agile">Agile Development</option>
+  <option value="TDD">Test Driven Development</option>
+  <option value="BDD">Behaviour Driven Development</option>
+</label>
+</select>
+<br>Why is the practice used </br>
+<textarea name="whyPractice" cols="50" rows="3"></textarea> <br>
+
+<br>What is the practice used for</br>
+<textarea name="whatPractice" cols="50" rows="3"></textarea> <br>
+
+<br>How is the practice used </br>
+<textarea name="howPractice" cols="50" rows="3"></textarea> <br>
+
+<br>When is the practice used </br>
+<textarea name="whenPractice" cols="50" rows="3"></textarea> <br>
+
+<br>Where is the practice used </br>
+<textarea name="wherePractice" cols="50" rows="3"></textarea> <br>
+
+<br>Who used the practice </br>
+<textarea name="whoPractice" cols="50" rows="3"></textarea> <br>
+
+<br>Benefit or Outcome </br>
+<textarea name="Benefit" cols="50" rows="3"></textarea> <br>
+
+<br>Result </br>
+<textarea name="Result" cols="50" rows="3"></textarea> <br>
+
+<br>Integrity of the information </br>
+<textarea name="Integrity" cols="50" rows="3"></textarea> <br>
+
+
+<br><label> Confidence Rating
+<select name="confidenceRating">
+  <option value="">CR Level: </option>
+  <option value="CR1">Level 1</option>
+  <option value="CR2">Level 2</option>
+  <option value="CR3">Level 3</option>
+  <option value="CR4">Level 4</option>
+  <option value="CR5">Level 5</option>
+</label>
+</select>
+
+<br>Reason of confidence rating </br>
+<textarea name="reasonConfidence" cols="50" rows="3"></textarea> <br>
+
+<br>Who Rated this </br>
+<textarea name="whoConfidence" cols="50" rows="2"></textarea> <br>
+
+
+
+
+
+<!--Research information-->
+<h2>Research Information</h2>
+<br><label> Research Method
+<select name="ResearchMethod">
+  <option value="">Choose Research Method </option>
+  <option value="Quantitative">Quantitative</option>
+  <option value="Qualitative">Qualitative</option>
+  <option value="Regression Analysis">Regression Analysis</option>
+  <option value="Experimental">Experimental</option>
+</label>
+</select>
+<br>
+<br>Research Question </br>
+<textarea name="ResearchQuestion" cols="50" rows="2"></textarea> <br>
+<br>Research Metrics </br>
+<textarea name="ResearchMetrics" cols="50" rows="2"></textarea> <br>
+<label> Nature of Participants
+<select name="Participants">
+  <option value="">Select Nature of Participants </option>
+  <option value="Developer">Developer</option>
+  <option value="Researcher">Researcher</option>
+  <option value="Practitioner"> Practitioner</option>
+  <option value="other">Other</option>
+</label>
+</select>
+<br><label>Research level
+<select name="ResearchLevel">
+  <option value="">Research Level: </option>
+  <option value="Level 1">Level 1</option>
+  <option value="Level 2">Level 2</option>
+  <option value="Level 3">Level 3</option>
+  <option value="Level 4">Level 4</option>
+  <option value="Level 5">Level 5</option>
+</label>
+</select>
+<br><br>
+<label>Credibility
+<input type="radio" name="credibilityRating" value="1">&#9734;
+<input type="radio" name="credibilityRating" value="2">&#9734;&#9734;
+<input type="radio" name="credibilityRating" value="3">&#9734;&#9734;&#9734;
+<input type="radio" name="credibilityRating" value="4">&#9734;&#9734;&#9734;&#9734;
+<input type="radio" name="credibilityRating" value="5">&#9734;&#9734;&#9734;&#9734;&#9734;
+</label>
+<br>
+<br>Reason of Credibility </br>
+<textarea name="reasonCredibility" cols="50" rows="3"></textarea> <br>
+
+<br>Who Rated this </br>
+<textarea name="whoCredibility" cols="50" rows="2"></textarea> <br>
+<label><input type ="submit" value="Post">
+<input type ="reset" value="Reset"></label>
+<!--Buttons used for posting the research or to reset the input info-->
+
+</form>
+</div>
+</body>
+</html>
